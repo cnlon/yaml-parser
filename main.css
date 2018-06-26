@@ -1,0 +1,82 @@
+body, h1, h4, .src, .dst, .CodeMirror {
+  box-sizing: border-box;
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+body>* {
+  flex-basis: 50%;
+}
+
+h1 {
+  flex-basis: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0 .5rem;
+  position: relative;
+  top: .5rem;
+}
+
+h4 {
+  height: 2rem;
+  line-height: 2rem;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0 .5rem;
+}
+
+.src, .dst {
+  position: relative;
+  height: calc(100% - 6rem);
+  overflow: hidden;
+}
+
+.src {
+  padding-left: .5rem;
+  padding-right: .25rem;
+}
+
+.dst {
+  padding-left: .25rem;
+  padding-right: .5rem;
+}
+
+#permalink {
+  float: right;
+}
+
+#source, #result {
+  visibility: hidden;
+}
+
+.CodeMirror {
+  height: 100%;
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.CodeMirror .cm-comment {
+  color: #baa;
+}
+
+.src .CodeMirror {
+  background-color: #fffffb;
+  border: 1px solid #888;
+  box-shadow: 0 0 3px #ccc inset;
+}
+
+.dst .CodeMirror {
+  background-color: #f8f8f8;
+  border: 1px solid #eee;
+}
